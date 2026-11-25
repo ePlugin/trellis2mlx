@@ -8,7 +8,7 @@ dependencies = [
     "numpy",
     "huggingface-hub",
     "safetensors",
-    "pillow",
+    "pillow>=13.0.0",  # 12.x tem ~60 alertas de imagem maliciosa (OSV, 25/11/2026)
     "trimesh",
     "scipy",
     "scikit-image",
@@ -17,7 +17,7 @@ dependencies = [
     "libigl",
     "xatlas",
     "opencv-python",
-    "rembg[cpu]==2.0.76",
+    "rembg[cpu]==2.0.88",  # 2.0.76 tem GHSA-qr6x-7v33-6qmg e prende o pillow < 13
 ]
 
 [project.optional-dependencies]
